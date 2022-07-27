@@ -3,8 +3,9 @@ import BackgroundImage from "./BackgroundImage";
 
 const StyledDiv = styled.div`
   height: 50%;
-  width: 70%;
+  width: 80%;
   border: 1px dashed blue;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;

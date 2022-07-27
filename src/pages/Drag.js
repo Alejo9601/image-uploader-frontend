@@ -4,8 +4,8 @@ import ChooseFileButton from "../components/ChooseFileButton";
 import styled from "styled-components";
 
 const DragSection = styled.section`
-  width: 70%;
-  height: 500px;
+  width: 85%;
+  height: 70%;
   background-color: white;
   display: flex;
   justify-content: center;
