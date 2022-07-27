@@ -11,6 +11,9 @@ const StyledDiv = styled.div`
   p {
     width: 100%;
     text-align: center;
+    color: #413f42;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
 `;
 const H1 = styled.h1``;

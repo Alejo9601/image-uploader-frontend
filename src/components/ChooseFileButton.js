@@ -18,11 +18,16 @@ const Button = styled.button`
   border-radius: 5px;
   cursor: pointer;
 `;
+const P = styled.p`
+  color: #413f42;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+`;
 
 const ChooseFileButton = ({ textButton }) => {
   return (
     <StyledDiv>
-      <p>OR</p>
+      <P>OR</P>
       <Button type="button">{textButton}</Button>
     </StyledDiv>
   );
