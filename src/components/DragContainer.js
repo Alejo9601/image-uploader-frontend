@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { font } from "../utils/css_vars";
 import BackgroundImage from "./BackgroundImage";
 
 const StyledDiv = styled.div`
@@ -17,8 +18,7 @@ const P = styled.p`
   text-align: center;
   padding: 5px;
   color: #cfd2cf;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: ${font};
 `;
 
 const DragContainer = () => {

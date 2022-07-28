@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { font } from "../utils/css_vars";
 
 const StyledDiv = styled.div`
   height: 25%;
@@ -12,8 +13,7 @@ const StyledDiv = styled.div`
     width: 100%;
     text-align: center;
     color: #413f42;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: ${font};
   }
 `;
 const H1 = styled.h1`

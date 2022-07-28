@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { font } from "../utils/css_vars";
 
 const StyledDiv = styled.div`
   height: 25%;
@@ -27,8 +28,7 @@ const Button = styled.div`
     right: 0;
     top: 0;
     bottom: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: ${font};
     font-weight: 500;
   }
 `;
@@ -40,8 +40,7 @@ const StyledInput = styled.input`
 `;
 const P = styled.p`
   color: #dddddd;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: ${font};
 `;
 
 const ChooseFileButton = ({ textButton }) => {
