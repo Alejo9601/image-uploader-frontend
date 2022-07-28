@@ -2,11 +2,12 @@ import DragContainer from "../components/DragContainer";
 import TitleHeader from "../components/TitleHeader";
 import ChooseFileButton from "../components/ChooseFileButton";
 import styled from "styled-components";
+import { cardBackground } from "../utils/css_vars";
 
 const DragSection = styled.section`
   width: 85%;
   height: 70%;
-  background-color: white;
+  background-color: ${cardBackground};
   display: flex;
   justify-content: center;
   align-items: center;

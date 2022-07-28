@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import ProgressBar from "../components/ProgressBar";
-import { font } from "../utils/css_vars";
+import { cardBackground, font } from "../utils/css_vars";
 
 const StyledDiv = styled.div`
-  background-color: white;
+  background-color: ${cardBackground};
   display: flex;
   flex-direction: column;
   justify-content: center;
