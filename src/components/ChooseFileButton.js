@@ -19,7 +19,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 const P = styled.p`
-  color: #413f42;
+  color: #dddddd;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 `;
@@ -27,7 +27,7 @@ const P = styled.p`
 const ChooseFileButton = ({ textButton }) => {
   return (
     <StyledDiv>
-      <P>OR</P>
+      <P>Or</P>
       <Button type="button">{textButton}</Button>
     </StyledDiv>
   );

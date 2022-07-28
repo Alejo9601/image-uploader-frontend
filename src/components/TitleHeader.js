@@ -16,8 +16,14 @@ const StyledDiv = styled.div`
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
 `;
-const H1 = styled.h1``;
-const P = styled.p``;
+const H1 = styled.h1`
+  font-size: 1.8rem;
+  font-weight: 500;
+`;
+const P = styled.p`
+  margin-top: 20px;
+  font-weight: 600;
+`;
 
 const TitleHeader = ({ textTitle, textDescription }) => {
   return (

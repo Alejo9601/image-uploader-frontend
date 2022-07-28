@@ -13,6 +13,14 @@ const DragSection = styled.section`
   flex-direction: column;
   border-radius: 10px;
   box-shadow: 0px 1px 5px 0px lightgray;
+
+  @media (min-width: 800px) {
+    width: 55%;
+  }
+
+  @media (min-width: 1366px) {
+    width: 30%;
+  }
 `;
 
 const Drag = () => {
