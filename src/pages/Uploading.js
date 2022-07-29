@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
   border-radius: 10px;
   box-shadow: 0px 1px 5px 0px lightgray;
 `;
-const Title = styled.p`
+const Status = styled.p`
   font-family: ${font};
   margin-bottom: 30px;
   width: 100%;
@@ -24,7 +24,7 @@ const Title = styled.p`
 const Uploading = () => {
   return (
     <StyledDiv>
-      <Title>Uploading...</Title>
+      <Status>Uploading...</Status>
       <ProgressBar />
     </StyledDiv>
   );
