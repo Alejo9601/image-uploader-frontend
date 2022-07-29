@@ -1,13 +1,10 @@
 import styled from "styled-components";
+import { FlexColumnDiv } from "../styled/FlexColumnDiv";
 import { font } from "../utils/css_vars";
 
-const StyledDiv = styled.div`
+const StyledDiv = styled(FlexColumnDiv)`
   height: 25%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 `;
 const Button = styled.div`
   margin-top: 20px;

@@ -1,16 +1,13 @@
 import styled from "styled-components";
+import { FlexColumnDiv } from "../styled/FlexColumnDiv";
 import { font } from "../utils/css_vars";
 import BackgroundImage from "./BackgroundImage";
 
-const StyledDiv = styled.div`
+const StyledDiv = styled(FlexColumnDiv)`
   height: 50%;
   width: 80%;
   border: 3px dashed #a2dbfa66;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: #e1e5ea80;
 `;
 const P = styled.p`
