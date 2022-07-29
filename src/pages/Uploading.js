@@ -3,7 +3,7 @@ import ProgressBar from "../components/ProgressBar";
 import { FlexCard } from "../styled/FlexCard";
 import { font } from "../utils/css_vars";
 
-const StyledDiv = styled(FlexCard)`
+const UploadingCard = styled(FlexCard)`
   padding: 30px 20px;
 `;
 const Status = styled.p`
@@ -17,10 +17,10 @@ const Status = styled.p`
 
 const Uploading = () => {
   return (
-    <StyledDiv>
+    <UploadingCard>
       <Status>Uploading...</Status>
       <ProgressBar />
-    </StyledDiv>
+    </UploadingCard>
   );
 };
 

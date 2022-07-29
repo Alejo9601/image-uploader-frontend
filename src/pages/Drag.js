@@ -4,7 +4,7 @@ import ChooseFileButton from "../components/ChooseFileButton";
 import styled from "styled-components";
 import { FlexCard } from "../styled/FlexCard";
 
-const DragSection = styled(FlexCard)`
+const SelectFileCard = styled(FlexCard)`
   width: 85%;
   height: 70%;
 
@@ -19,14 +19,14 @@ const DragSection = styled(FlexCard)`
 
 const Drag = () => {
   return (
-    <DragSection>
+    <SelectFileCard>
       <TitleHeader
         textTitle="Upload your Image"
         textDescription="Files should be PNG, JPEG ..."
       />
       <DragContainer />
       <ChooseFileButton textButton="Choose a file" />
-    </DragSection>
+    </SelectFileCard>
   );
 };
 
