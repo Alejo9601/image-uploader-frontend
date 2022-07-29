@@ -15,12 +15,16 @@ const Status = styled.p`
   font-weight: 600;
 `;
 
-const Uploading = () => {
+const Uploading = ({ show }) => {
   return (
-    <UploadingCard>
-      <Status>Uploading...</Status>
-      <ProgressBar />
-    </UploadingCard>
+    <>
+      {show ? (
+        <UploadingCard>
+          <Status>Uploading...</Status>
+          <ProgressBar />
+        </UploadingCard>
+      ) : null}
+    </>
   );
 };
 

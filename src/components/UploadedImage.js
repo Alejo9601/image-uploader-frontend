@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import FileStatusContext from "../context/FileStatusContext";
 
 const StyledDiv = styled.div`
   height: 50%;
@@ -12,7 +14,9 @@ const StyledImg = styled.img`
   object-fit: cover;
 `;
 
-const UploadedImage = ({ image }) => {
+const UploadedImage = () => {
+  const { selectedFile } = useContext(FileStatusContext);
+
   return (
     <StyledDiv>
       <StyledImg

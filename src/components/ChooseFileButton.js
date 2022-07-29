@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import styled from "styled-components";
 import { FlexColumnDiv } from "../styled/FlexColumnDiv";
 import { font } from "../utils/css_vars";
@@ -14,13 +14,11 @@ const Button = styled.div`
 
   ::before {
     border-radius: 5px;
-    cursor: pointer;
     background-color: #1363df;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    content: "Choose a File";
     position: absolute;
     left: 0;
     right: 0;
@@ -28,6 +26,8 @@ const Button = styled.div`
     bottom: 0;
     font-family: ${font};
     font-weight: 500;
+    cursor: pointer;
+    content: "Choose a File";
   }
 `;
 const StyledInput = styled.input`
@@ -42,12 +42,20 @@ const P = styled.p`
 `;
 
 const ChooseFileButton = ({ textButton, handleSelectedFile }) => {
+  const inputRef = useRef();
+
+  const handleOnChange = () => {
+    const selectedImg = inputRef.current.files[0];
+    handleSelectedFile(selectedImg);
+  };
+
   return (
     <StyledDiv>
       <P>Or</P>
       <Button>
         <StyledInput
-          onChange={() => handleSelectedFile()}
+          ref={inputRef}
+          onChange={handleOnChange}
           type="file"
           name="src-file"
           aria-label="Archivo"

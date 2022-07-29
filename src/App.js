@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Detail from "./pages/Detail";
-import Drag from "./pages/Drag";
-import Uploading from "./pages/Uploading";
+import SelectionProcess from "./pages/SelectionProcess";
 import FileStatusContext from "./context/FileStatusContext";
 import { useContext } from "react";
 
@@ -20,7 +19,7 @@ function App() {
 
   return (
     <StyledMain>
-      {uploading === true ? <Uploading /> : <Drag></Drag>}
+      <SelectionProcess />
     </StyledMain>
   );
 }
