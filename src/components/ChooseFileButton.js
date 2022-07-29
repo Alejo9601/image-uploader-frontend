@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { FlexColumnDiv } from "../styled/FlexColumnDiv";
 import { font } from "../utils/css_vars";
@@ -40,12 +41,17 @@ const P = styled.p`
   font-family: ${font};
 `;
 
-const ChooseFileButton = ({ textButton }) => {
+const ChooseFileButton = ({ textButton, handleSelectedFile }) => {
   return (
     <StyledDiv>
       <P>Or</P>
       <Button>
-        <StyledInput type="file" name="src-file" aria-label="Archivo" />
+        <StyledInput
+          onChange={() => handleSelectedFile()}
+          type="file"
+          name="src-file"
+          aria-label="Archivo"
+        />
       </Button>
     </StyledDiv>
   );
