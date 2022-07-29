@@ -2,9 +2,9 @@ import DragContainer from "../components/DragContainer";
 import TitleHeader from "../components/TitleHeader";
 import ChooseFileButton from "../components/ChooseFileButton";
 import styled from "styled-components";
-import { FlexColumnDiv } from "../styled/FlexColumnDiv";
+import { FlexCard } from "../styled/FlexCard";
 
-const DragSection = styled(FlexColumnDiv)`
+const DragSection = styled(FlexCard)`
   width: 85%;
   height: 70%;
 

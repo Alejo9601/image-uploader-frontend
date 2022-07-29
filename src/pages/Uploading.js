@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import ProgressBar from "../components/ProgressBar";
-import { FlexColumnDiv } from "../styled/FlexColumnDiv";
+import { FlexCard } from "../styled/FlexCard";
 import { font } from "../utils/css_vars";
 
-const StyledDiv = styled(FlexColumnDiv)`
+const StyledDiv = styled(FlexCard)`
   padding: 30px 20px;
 `;
 const Status = styled.p`
