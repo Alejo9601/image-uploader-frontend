@@ -3,8 +3,8 @@ import TitleHeader from "../components/TitleHeader";
 import ChooseFileButton from "../components/ChooseFileButton";
 import styled from "styled-components";
 import { FlexCard } from "../styled/FlexCard";
-import { useContext, useRef } from "react";
-import UploadContext from "../context/UploadContext";
+import { useContext } from "react";
+import FileStatusContext from "../context/FileStatusContext";
 
 const SelectFileCard = styled(FlexCard)`
   width: 85%;
@@ -20,10 +20,10 @@ const SelectFileCard = styled(FlexCard)`
 `;
 
 const Drag = () => {
-  const { setLoading } = useContext(UploadContext);
+  const { setUploading } = useContext(FileStatusContext);
 
   const handleSelectedFile = () => {
-    setLoading(true);
+    setUploading(true);
   };
 
   return (

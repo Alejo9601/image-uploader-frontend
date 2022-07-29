@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Detail from "./pages/Detail";
 import Drag from "./pages/Drag";
 import Uploading from "./pages/Uploading";
-import UploadContext, { UploadContextProvider } from "./context/UploadContext";
+import FileStatusContext from "./context/FileStatusContext";
 import { useContext } from "react";
 
 const StyledMain = styled.main`
@@ -16,10 +16,12 @@ const StyledMain = styled.main`
 `;
 
 function App() {
-  const { loading } = useContext(UploadContext);
+  const { uploading } = useContext(FileStatusContext);
 
   return (
-    <StyledMain>{loading === true ? <Uploading /> : <Drag></Drag>}</StyledMain>
+    <StyledMain>
+      {uploading === true ? <Uploading /> : <Drag></Drag>}
+    </StyledMain>
   );
 }
 
