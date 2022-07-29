@@ -2,7 +2,7 @@ import styled from "styled-components";
 import ImgLink from "../components/ImgLink";
 import TitleHeader from "../components/TitleHeader";
 import UploadedImage from "../components/UploadedImage";
-import { FlexColumnDiv } from "../styled/FlexDiv";
+import { FlexColumnDiv } from "../styled/FlexColumnDiv";
 
 const DetailCard = styled(FlexColumnDiv)`
   width: 85%;

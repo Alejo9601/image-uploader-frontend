@@ -2,7 +2,7 @@ import DragContainer from "../components/DragContainer";
 import TitleHeader from "../components/TitleHeader";
 import ChooseFileButton from "../components/ChooseFileButton";
 import styled from "styled-components";
-import { FlexColumnDiv } from "../styled/FlexDiv";
+import { FlexColumnDiv } from "../styled/FlexColumnDiv";
 
 const DragSection = styled(FlexColumnDiv)`
   width: 85%;
