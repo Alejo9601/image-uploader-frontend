@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { FlexColumnDiv } from "../styled/FlexColumnDiv";
 import { colorBlue, font } from "../utils/css_vars";
 
-const StyledDiv = styled(FlexColumnDiv)`
+const Wrapper = styled(FlexColumnDiv)`
   height: 25%;
   width: 100%;
 `;
@@ -36,12 +36,12 @@ const CopyButton = styled.button`
 
 const ImgLink = () => {
   return (
-    <StyledDiv>
+    <Wrapper>
       <LinkContainer>
         <TextArea readOnly={true}></TextArea>
         <CopyButton>Copy Link</CopyButton>
       </LinkContainer>
-    </StyledDiv>
+    </Wrapper>
   );
 };
 
