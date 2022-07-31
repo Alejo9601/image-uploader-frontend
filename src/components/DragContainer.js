@@ -4,8 +4,9 @@ import { font } from "../utils/css_vars";
 import BackgroundImage from "./BackgroundImage";
 
 const StyledDiv = styled(FlexColumnDiv)`
-  height: 50%;
-  width: 80%;
+  height: 250px;
+  width: 85%;
+  margin: 15px 0px;
   border: 3px dashed #a2dbfa66;
   border-radius: 10px;
   background-color: #e1e5ea80;
