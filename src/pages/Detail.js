@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ImgLink from "../components/ImgLink";
-import SuccessStatus from "../components/SuccessStatus";
+import SuccessHeader from "../components/SuccessHeader";
 import UploadedImage from "../components/UploadedImage";
 import { FlexCard } from "../styled/FlexCard";
 
@@ -19,7 +19,7 @@ const DetailCard = styled(FlexCard)`
 const Detail = () => {
   return (
     <DetailCard>
-      <SuccessStatus />
+      <SuccessHeader />
       <UploadedImage />
       <ImgLink />
     </DetailCard>
