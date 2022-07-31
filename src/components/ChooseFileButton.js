@@ -6,6 +6,7 @@ import { font } from "../utils/css_vars";
 const StyledDiv = styled(FlexColumnDiv)`
   height: 25%;
   width: 100%;
+  margin: 15px 0px 40px 0px;
 `;
 const Button = styled.div`
   margin-top: 20px;
