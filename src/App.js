@@ -20,6 +20,7 @@ function App() {
   return (
     <StyledMain>
       <SelectionProcess />
+      <Detail></Detail>
     </StyledMain>
   );
 }
