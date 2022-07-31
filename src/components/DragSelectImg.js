@@ -8,14 +8,13 @@ import FileStatusContext from "../context/FileStatusContext";
 
 const SelectFileCard = styled(FlexCard)`
   width: 85%;
-  height: 70%;
 
   @media (min-width: 800px) {
     width: 55%;
   }
 
   @media (min-width: 1366px) {
-    width: 30%;
+    width: 25%;
   }
 `;
 
