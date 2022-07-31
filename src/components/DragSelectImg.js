@@ -1,5 +1,5 @@
 import DragContainer from "../components/DragContainer";
-import TitleHeader from "../components/TitleHeader";
+import UploadImgHeader from "./UploadImgHeader";
 import ChooseFileButton from "../components/ChooseFileButton";
 import styled from "styled-components";
 import { FlexCard } from "../styled/FlexCard";
@@ -32,7 +32,7 @@ const DragSelectFile = ({ show = true }) => {
     <>
       {show ? (
         <SelectFileCard>
-          <TitleHeader
+          <UploadImgHeader
             textTitle="Upload your Image"
             textDescription="Files should be PNG, JPEG ..."
           />
