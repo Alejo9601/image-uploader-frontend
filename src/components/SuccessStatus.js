@@ -9,7 +9,7 @@ const SuccessStatus = () => {
         src={require(`../assets/check.png`)}
         alt="Success"
       />
-      <Title>Succesfully Uploaded !!</Title>
+      <Title>Uploaded Successfully!</Title>
     </CardHeader>
   );
 };
