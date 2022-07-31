@@ -3,13 +3,14 @@ import styled from "styled-components";
 import FileStatusContext from "../context/FileStatusContext";
 
 const StyledDiv = styled.div`
-  height: 50%;
-  width: 80%;
+  height: 250px;
+  width: 85%;
   overflow: hidden;
   border-radius: 10px;
+  margin: 15px 0px;
 `;
 const StyledImg = styled.img`
-  height: 300px;
+  height: 250px;
   width: auto;
   object-fit: cover;
 `;
