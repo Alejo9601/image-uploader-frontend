@@ -1,5 +1,5 @@
 import DragContainer from "../components/DragContainer";
-import UploadImgHeader from "./UploadImgHeader";
+import UploadImgHeader from "../components/UploadImgHeader";
 import ChooseFileButton from "../components/ChooseFileButton";
 import styled from "styled-components";
 import { FlexCard } from "../styled/FlexCard";

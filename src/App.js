@@ -1,26 +1,33 @@
 import styled from "styled-components";
 import Detail from "./pages/Detail";
-import SelectionProcess from "./pages/SelectionProcess";
 import FileStatusContext from "./context/FileStatusContext";
 import { useContext } from "react";
+import DragSelectFile from "./pages/DragSelectImg";
+import Uploading from "./pages/Uploading";
 
 const StyledMain = styled.main`
   width: 100vw;
   height: 100vh;
   background-color: #f2f2f2;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 `;
 
 function App() {
-  const { uploading } = useContext(FileStatusContext);
+  const { uploading, selectedFile } = useContext(FileStatusContext);
 
   return (
     <StyledMain>
-      <SelectionProcess />
-      <Detail></Detail>
+      {selectedFile !== null ? (
+        <Detail />
+      ) : (
+        <>
+          <DragSelectFile show={uploading ? false : true} />
+          <Uploading show={uploading ? true : false} />
+        </>
+      )}
     </StyledMain>
   );
 }
