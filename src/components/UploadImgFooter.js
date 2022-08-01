@@ -10,7 +10,7 @@ const StyledDiv = styled(FlexColumnDiv)`
   margin: 15px 0px 40px 0px;
 `;
 
-const ChooseFileButton = ({ textButton, handleSelectedFile }) => {
+const UploadImgFooter = ({ handleSelectedFile }) => {
   const inputRef = useRef();
 
   const handleOnChange = () => {
@@ -26,4 +26,4 @@ const ChooseFileButton = ({ textButton, handleSelectedFile }) => {
   );
 };
 
-export default ChooseFileButton;
+export default UploadImgFooter;

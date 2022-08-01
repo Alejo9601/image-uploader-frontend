@@ -1,6 +1,6 @@
 import DragContainer from "../components/DragContainer";
 import UploadImgHeader from "../components/UploadImgHeader";
-import ChooseFileButton from "../components/ChooseFileButton";
+import UploadImgFooter from "../components/UploadImgFooter";
 import styled from "styled-components";
 import { FlexCard } from "../styled/FlexCard";
 import { useContext } from "react";
@@ -37,10 +37,7 @@ const DragSelectFile = ({ show = true }) => {
             textDescription="Files should be PNG, JPEG ..."
           />
           <DragContainer handleSelectedFile={handleSelectedFile} />
-          <ChooseFileButton
-            handleSelectedFile={handleSelectedFile}
-            textButton="Choose a file"
-          />
+          <UploadImgFooter handleSelectedFile={handleSelectedFile} />
         </SelectFileCard>
       ) : null}
     </>
