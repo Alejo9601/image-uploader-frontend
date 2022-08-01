@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { FlexColumnDiv } from "../styled/FlexColumnDiv";
 import { font } from "../utils/css_vars";
@@ -10,6 +11,7 @@ const StyledDiv = styled(FlexColumnDiv)`
   border: 3px dashed #a2dbfa66;
   border-radius: 10px;
   background-color: #e1e5ea80;
+  position: relative;
 `;
 const P = styled.p`
   width: 100%;
@@ -17,13 +19,38 @@ const P = styled.p`
   padding: 5px;
   color: #cfd2cf;
   font-family: ${font};
+  top: 75%;
 `;
-
+const StyledInput = styled.input`
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+`;
+const BackImgContainer = styled(FlexColumnDiv)`
+  width: 100%;
+  height: 100%;
+`;
 const DragContainer = () => {
+  const inputRef = useRef();
+  const divRef = useRef();
+
+  useEffect(() => {
+    inputRef.current.addEventListener("dragenter", () => {
+      divRef.current.style.backgroundColor = "black";
+    });
+    inputRef.current.addEventListener("dragleave", () => {
+      divRef.current.style.backgroundColor = "white";
+    });
+  }, []);
+
   return (
-    <StyledDiv>
-      <BackgroundImage />
-      <P>Drag and Drop your image here</P>
+    <StyledDiv ref={divRef}>
+      <BackImgContainer>
+        <BackgroundImage />
+        <P>Drag and Drop your image here</P>
+      </BackImgContainer>
+      <StyledInput ref={inputRef} type="file" />
     </StyledDiv>
   );
 };
