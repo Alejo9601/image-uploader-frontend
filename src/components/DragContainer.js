@@ -36,10 +36,10 @@ const DragContainer = ({ handleSelectedFile }) => {
 
   useEffect(() => {
     inputRef.current.addEventListener("dragenter", () => {
-      divRef.current.style.backgroundColor = "black";
+      divRef.current.style.backgroundColor = "#EAF6F6";
     });
     inputRef.current.addEventListener("dragleave", () => {
-      divRef.current.style.backgroundColor = "white";
+      divRef.current.style.backgroundColor = "#e1e5ea80";
     });
   }, []);
 
