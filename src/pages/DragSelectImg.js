@@ -36,7 +36,7 @@ const DragSelectFile = ({ show = true }) => {
             textTitle="Upload your Image"
             textDescription="Files should be PNG, JPEG ..."
           />
-          <DragContainer />
+          <DragContainer handleSelectedFile={handleSelectedFile} />
           <ChooseFileButton
             handleSelectedFile={handleSelectedFile}
             textButton="Choose a file"

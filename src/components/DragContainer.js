@@ -19,7 +19,6 @@ const P = styled.p`
   padding: 5px;
   color: #cfd2cf;
   font-family: ${font};
-  top: 75%;
 `;
 const StyledInput = styled.input`
   width: 100%;
@@ -31,7 +30,7 @@ const BackImgContainer = styled(FlexColumnDiv)`
   width: 100%;
   height: 100%;
 `;
-const DragContainer = () => {
+const DragContainer = ({ handleSelectedFile }) => {
   const inputRef = useRef();
   const divRef = useRef();
 
@@ -50,7 +49,11 @@ const DragContainer = () => {
         <BackgroundImage />
         <P>Drag and Drop your image here</P>
       </BackImgContainer>
-      <StyledInput ref={inputRef} type="file" />
+      <StyledInput
+        ref={inputRef}
+        type="file"
+        onChange={() => handleSelectedFile()}
+      />
     </StyledDiv>
   );
 };
