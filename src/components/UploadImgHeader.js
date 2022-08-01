@@ -1,12 +1,12 @@
 import { CardHeader } from "../styled/CardHeader";
-import Description from "./Description";
+import { StyledParagraph } from "../styled/StyledParagraph";
 import Title from "./Title";
 
 const UploadImgHeader = ({ textTitle, textDescription }) => {
   return (
     <CardHeader>
       <Title>{textTitle}</Title>
-      <Description>{textDescription}</Description>
+      <StyledParagraph>{textDescription}</StyledParagraph>
     </CardHeader>
   );
 };

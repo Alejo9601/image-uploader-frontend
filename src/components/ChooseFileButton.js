@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import styled from "styled-components";
 import { FlexColumnDiv } from "../styled/FlexColumnDiv";
+import { StyledParagraph } from "../styled/StyledParagraph";
 import { font } from "../utils/css_vars";
 
 const StyledDiv = styled(FlexColumnDiv)`
@@ -37,10 +38,6 @@ const StyledInput = styled.input`
   height: 32px;
   display: inline-block;
 `;
-const P = styled.p`
-  color: #dddddd;
-  font-family: ${font};
-`;
 
 const ChooseFileButton = ({ textButton, handleSelectedFile }) => {
   const inputRef = useRef();
@@ -52,7 +49,7 @@ const ChooseFileButton = ({ textButton, handleSelectedFile }) => {
 
   return (
     <StyledDiv>
-      <P>Or</P>
+      <StyledParagraph>Or</StyledParagraph>
       <Button>
         <StyledInput
           ref={inputRef}
