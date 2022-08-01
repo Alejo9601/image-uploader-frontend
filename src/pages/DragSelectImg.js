@@ -32,10 +32,7 @@ const DragSelectFile = ({ show = true }) => {
     <>
       {show ? (
         <SelectFileCard>
-          <UploadImgHeader
-            textTitle="Upload your Image"
-            textDescription="Files should be PNG, JPEG ..."
-          />
+          <UploadImgHeader />
           <DragContainer handleSelectedFile={handleSelectedFile} />
           <UploadImgFooter handleSelectedFile={handleSelectedFile} />
         </SelectFileCard>
