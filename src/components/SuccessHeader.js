@@ -1,5 +1,5 @@
 import { CardHeader } from "../styled/CardHeader";
-import Title from "./Title";
+import { StyledH1 } from "../styled/StyledH1";
 
 const SuccesHeader = () => {
   return (
@@ -9,7 +9,7 @@ const SuccesHeader = () => {
         src={require(`../assets/check.png`)}
         alt="Success"
       />
-      <Title>Uploaded Successfully!</Title>
+      <StyledH1>Uploaded Successfully!</StyledH1>
     </CardHeader>
   );
 };
