@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import styled from "styled-components";
 import { FlexColumnDiv } from "../styled/FlexColumnDiv";
 import { StyledParagraph } from "../styled/StyledParagraph";
@@ -11,17 +10,10 @@ const StyledDiv = styled(FlexColumnDiv)`
 `;
 
 const UploadImgFooter = ({ handleSelectedFile }) => {
-  const inputRef = useRef();
-
-  const handleOnChange = () => {
-    const selectedImg = inputRef.current.files[0];
-    handleSelectedFile(selectedImg);
-  };
-
   return (
     <StyledDiv>
       <StyledParagraph>Or</StyledParagraph>
-      <InputButton handleOnChange={handleOnChange} />
+      <InputButton handleSelectedFile={handleSelectedFile} />
     </StyledDiv>
   );
 };

@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import styled from "styled-components";
 import { FlexColumnDiv } from "../styled/FlexColumnDiv";
 import { colorBlue, font } from "../utils/css_vars";
@@ -27,10 +28,17 @@ const StyledInput = styled.input`
   font-size: 0;
 `;
 
-const InputButton = ({ handleOnChange }) => {
+const InputButton = ({ handleSelectedFile }) => {
+  const inputRef = useRef();
+
+  const handleOnChange = () => {
+    const selectedImg = inputRef.current.files[0];
+    handleSelectedFile(selectedImg);
+  };
+
   return (
     <Button>
-      <StyledInput type="file" handleOnChange={() => handleOnChange()} />
+      <StyledInput ref={inputRef} type="file" onChange={handleOnChange} />
     </Button>
   );
 };
