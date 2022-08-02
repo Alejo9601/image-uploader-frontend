@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { FlexColumnDiv } from "../styled/FlexColumnDiv";
+import { StyledInput } from "../styled/StyledInput";
 import { StyledParagraph } from "../styled/StyledParagraph";
 import BackgroundImage from "./BackgroundImage";
 
@@ -15,12 +16,6 @@ const StyledDiv = styled(FlexColumnDiv)`
 `;
 const GuideParagraph = styled(StyledParagraph)`
   color: #cfd2cf;
-`;
-const StyledInput = styled.input`
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  position: absolute;
 `;
 
 const DragContainer = ({ handleSelectedFile }) => {

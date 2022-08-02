@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import styled from "styled-components";
 import { FlexColumnDiv } from "../styled/FlexColumnDiv";
+import { StyledInput } from "../styled/StyledInput";
 import { colorBlue, font } from "../utils/css_vars";
 
 const Button = styled(FlexColumnDiv)`
@@ -18,14 +19,6 @@ const Button = styled(FlexColumnDiv)`
     content: "Choose a File";
     padding: 2px 5px;
   }
-`;
-const StyledInput = styled.input`
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  position: absolute;
-  cursor: pointer;
-  font-size: 0;
 `;
 
 const InputButton = ({ handleSelectedFile }) => {
