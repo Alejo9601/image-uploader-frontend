@@ -27,6 +27,11 @@ const DragContainer = ({ handleSelectedFile }) => {
   const inputRef = useRef();
   const divRef = useRef();
 
+  const handleOnChange = () => {
+    const selectedImg = inputRef.current.files[0];
+    handleSelectedFile(selectedImg);
+  };
+
   useEffect(() => {
     inputRef.current.addEventListener("dragenter", () => {
       divRef.current.style.backgroundColor = "#EAF6F6";
@@ -42,11 +47,7 @@ const DragContainer = ({ handleSelectedFile }) => {
         <BackgroundImage />
         <GuideParagraph>{`Drag & Drop your image here`}</GuideParagraph>
       </FlexColumnDiv>
-      <StyledInput
-        ref={inputRef}
-        type="file"
-        onChange={() => handleSelectedFile()}
-      />
+      <StyledInput ref={inputRef} type="file" onChange={handleOnChange} />
     </StyledDiv>
   );
 };
