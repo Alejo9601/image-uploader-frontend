@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { FlexCard } from "../styled/FlexCard";
 import { useContext } from "react";
 import FileStatusContext from "../context/FileStatusContext";
+import uploadImage from "../services/uploadImage";
 
 const SelectFileCard = styled(FlexCard)`
   width: 85%;
@@ -23,9 +24,13 @@ const DragSelectFile = ({ show = true }) => {
 
   const handleSelectedFile = (selectedImg) => {
     setUploading(true);
-    setTimeout(() => {
-      setSelectedFile(selectedImg);
-    }, 2000);
+    uploadImage(selectedImg).then((res) => {
+      console.log(res);
+      setUploading(false);
+    });
+    // setTimeout(() => {
+    //   setSelectedFile(selectedImg);
+    // }, 2000);
   };
 
   return (
