@@ -1,6 +1,9 @@
+import { useContext, useRef } from "react";
 import styled from "styled-components";
+import FileStatusContext from "../context/FileStatusContext";
 import { FlexColumnDiv } from "../styled/FlexColumnDiv";
 import { colorBlue, font } from "../utils/css_vars";
+import { trimText } from "../utils/trimText";
 
 const Wrapper = styled(FlexColumnDiv)`
   height: 25%;
@@ -22,6 +25,11 @@ const TextArea = styled.textarea`
   background-color: transparent;
   outline: none;
   border: 0px;
+  overflow: hidden;
+  font-family: ${font};
+  font-weight: 600;
+  text-align: center;
+  padding-top: 12px;
 `;
 const CopyButton = styled.button`
   width: 25%;
@@ -31,17 +39,35 @@ const CopyButton = styled.button`
   color: white;
   font-family: ${font};
   border: 0px;
-  padding: 10px;
+  padding: 0px 10px;
   font-weight: 500;
   cursor: pointer;
 `;
 
 const ImgLink = () => {
+  const { selectedFile } = useContext(FileStatusContext);
+  const textAreaRef = useRef();
+  const url = `https://img-upload-back.herokuapp.com/${selectedFile.filename}`;
+
+  const handleClick = () => {
+    let TempText = document.createElement("input");
+    TempText.value = url;
+    document.body.appendChild(TempText);
+    TempText.select();
+
+    document.execCommand("copy");
+    document.body.removeChild(TempText);
+
+    alert("Copied the text: " + TempText.value);
+  };
+
   return (
     <Wrapper>
       <LinkContainer>
-        <TextArea readOnly={true}></TextArea>
-        <CopyButton>Copy Link</CopyButton>
+        <TextArea ref={textAreaRef} readOnly={true}>
+          {trimText(url, 40)}
+        </TextArea>
+        <CopyButton onClick={handleClick}>Copy Link</CopyButton>
       </LinkContainer>
     </Wrapper>
   );
