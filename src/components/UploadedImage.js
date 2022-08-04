@@ -8,10 +8,12 @@ const StyledDiv = styled.div`
   overflow: hidden;
   border-radius: 10px;
   margin: 15px 0px;
+  display: flex;
+  justify-content: center;
 `;
 const StyledImg = styled.img`
-  height: 250px;
-  width: auto;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 `;
 
