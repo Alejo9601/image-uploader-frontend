@@ -24,13 +24,12 @@ const DragSelectFile = ({ show = true }) => {
 
   const handleSelectedFile = (selectedImg) => {
     setUploading(true);
-    uploadImage(selectedImg).then((res) => {
-      console.log(res);
-      setUploading(false);
-    });
-    // setTimeout(() => {
-    //   setSelectedFile(selectedImg);
-    // }, 2000);
+    uploadImage(selectedImg).then((res) =>
+      setTimeout(() => {
+        setSelectedFile(res);
+        setUploading(false);
+      }, 2000)
+    );
   };
 
   return (

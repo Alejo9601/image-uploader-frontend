@@ -21,7 +21,7 @@ const UploadedImage = () => {
   return (
     <StyledDiv>
       <StyledImg
-        src={require(`../assets/call-of-duty-modern-warfare-2-1200x675-1.jpg`)}
+        src={`https://img-upload-back.herokuapp.com/${selectedFile.filename}`}
         alt="Uploaded"
       />
     </StyledDiv>
