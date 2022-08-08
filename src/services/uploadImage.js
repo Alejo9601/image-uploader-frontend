@@ -5,9 +5,10 @@ const uploadImage = (imgToUpload) => {
     method: "POST",
     body: formData,
   };
-  return fetch("https://img-upload-back.herokuapp.com/upload", options).then(
-    (res) => res.json()
-  );
+  return fetch(
+    "https://img-upload-back.herokuapp.com/api/v1/images",
+    options
+  ).then((res) => res.json());
 };
 
 export default uploadImage;
