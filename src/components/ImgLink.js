@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import styled from "styled-components";
 import FileStatusContext from "../context/FileStatusContext";
 import { FlexColumnDiv } from "../styled/FlexColumnDiv";
@@ -47,6 +47,9 @@ const CopyButton = styled.button`
 const ImgLink = () => {
   const { selectedFile } = useContext(FileStatusContext);
   const textAreaRef = useRef();
+
+  const [copied, setCopied] = useState(false);
+
   const url = `https://img-upload-back.herokuapp.com/${selectedFile.filename}`;
 
   const handleClick = () => {
@@ -58,7 +61,7 @@ const ImgLink = () => {
     document.execCommand("copy");
     document.body.removeChild(TempText);
 
-    alert("Copied the text: " + TempText.value);
+    setCopied(true);
   };
 
   return (
@@ -67,7 +70,9 @@ const ImgLink = () => {
         <TextArea ref={textAreaRef} readOnly={true}>
           {trimText(url, 40)}
         </TextArea>
-        <CopyButton onClick={handleClick}>Copy Link</CopyButton>
+        <CopyButton onClick={handleClick}>
+          {copied ? "Copied" : "Copy Link"}
+        </CopyButton>
       </LinkContainer>
     </Wrapper>
   );
