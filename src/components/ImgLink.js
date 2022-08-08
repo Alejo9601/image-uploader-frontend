@@ -1,6 +1,5 @@
-import { useContext, useRef, useState } from "react";
 import styled from "styled-components";
-import FileStatusContext from "../context/FileStatusContext";
+import useCopyToClipboard from "../hooks/useCopyToClipboard";
 import { FlexColumnDiv } from "../styled/FlexColumnDiv";
 import { colorBlue, font } from "../utils/css_vars";
 import { trimText } from "../utils/trimText";
@@ -45,32 +44,13 @@ const CopyButton = styled.button`
 `;
 
 const ImgLink = () => {
-  const { selectedFile } = useContext(FileStatusContext);
-  const textAreaRef = useRef();
-
-  const [copied, setCopied] = useState(false);
-
-  const url = `https://img-upload-back.herokuapp.com/${selectedFile.filename}`;
-
-  const handleClick = () => {
-    let TempText = document.createElement("input");
-    TempText.value = url;
-    document.body.appendChild(TempText);
-    TempText.select();
-
-    document.execCommand("copy");
-    document.body.removeChild(TempText);
-
-    setCopied(true);
-  };
+  const { copied, link, copyLinkToClipboard } = useCopyToClipboard();
 
   return (
     <Wrapper>
       <LinkContainer>
-        <TextArea ref={textAreaRef} readOnly={true}>
-          {trimText(url, 40)}
-        </TextArea>
-        <CopyButton onClick={handleClick}>
+        <TextArea readOnly={true}>{trimText(link, 40)}</TextArea>
+        <CopyButton onClick={copyLinkToClipboard}>
           {copied ? "Copied" : "Copy Link"}
         </CopyButton>
       </LinkContainer>
