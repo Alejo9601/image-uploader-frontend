@@ -22,7 +22,10 @@ const UploadedImage = () => {
 
   return (
     <StyledDiv>
-      <StyledImg src={uploadedImg} alt="Uploaded" />
+      <StyledImg
+        src={`https://img-upload-back.herokuapp.com/${uploadedImg.name}`}
+        alt="Uploaded"
+      />
     </StyledDiv>
   );
 };
