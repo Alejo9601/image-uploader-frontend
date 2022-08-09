@@ -16,11 +16,11 @@ const StyledMain = styled.main`
 `;
 
 function App() {
-  const { uploading, selectedFile } = useContext(FileStatusContext);
+  const { uploading, uploadedImg } = useContext(FileStatusContext);
 
   return (
     <StyledMain>
-      {selectedFile !== null ? (
+      {uploadedImg !== null ? (
         <Detail />
       ) : (
         <>

@@ -18,14 +18,11 @@ const StyledImg = styled.img`
 `;
 
 const UploadedImage = () => {
-  const { selectedFile } = useContext(FileStatusContext);
+  const { uploadedImg } = useContext(FileStatusContext);
 
   return (
     <StyledDiv>
-      <StyledImg
-        src={`https://img-upload-back.herokuapp.com/${selectedFile.filename}`}
-        alt="Uploaded"
-      />
+      <StyledImg src={uploadedImg} alt="Uploaded" />
     </StyledDiv>
   );
 };

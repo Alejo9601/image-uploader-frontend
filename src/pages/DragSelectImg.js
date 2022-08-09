@@ -20,13 +20,13 @@ const SelectFileCard = styled(FlexCard)`
 `;
 
 const DragSelectFile = ({ show = true }) => {
-  const { setUploading, setSelectedFile } = useContext(FileStatusContext);
+  const { setUploading, setUploadedImg } = useContext(FileStatusContext);
 
   const handleSelectedFile = (selectedImg) => {
     setUploading(true);
     uploadImage(selectedImg).then((res) =>
       setTimeout(() => {
-        setSelectedFile(res);
+        setUploadedImg(res);
         setUploading(false);
       }, 2000)
     );
