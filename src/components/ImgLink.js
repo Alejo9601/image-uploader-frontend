@@ -2,7 +2,6 @@ import styled from "styled-components";
 import useCopyToClipboard from "../hooks/useCopyToClipboard";
 import { FlexColumnDiv } from "../styled/FlexColumnDiv";
 import { colorBlue, font } from "../utils/css_vars";
-import { trimText } from "../utils/trimText";
 
 const Wrapper = styled(FlexColumnDiv)`
   height: 25%;
@@ -15,20 +14,19 @@ const LinkContainer = styled(FlexColumnDiv)`
   height: 35px;
   width: 85%;
   flex-direction: row;
+  justify-content: space-between;
   padding: 1px;
   border: 1px solid lightgray;
 `;
-const TextArea = styled.textarea`
-  width: 75%;
-  resize: none;
-  background-color: transparent;
-  outline: none;
-  border: 0px;
+const Plink = styled.p`
+  width: 70%;
+  padding-left: 10px;
   overflow: hidden;
   font-family: ${font};
   font-weight: 600;
   text-align: center;
-  padding-top: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 `;
 const CopyButton = styled.button`
   width: 25%;
@@ -49,7 +47,7 @@ const ImgLink = () => {
   return (
     <Wrapper>
       <LinkContainer>
-        <TextArea readOnly={true}>{trimText(link, 40)}</TextArea>
+        <Plink>{link}</Plink>
         <CopyButton onClick={copyLinkToClipboard}>
           {copied ? "Copied" : "Copy Link"}
         </CopyButton>
