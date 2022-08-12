@@ -1,24 +1,11 @@
 import DragContainer from "../components/DragContainer";
 import UploadImgHeader from "../components/UploadImgHeader";
 import UploadImgFooter from "../components/UploadImgFooter";
-import styled from "styled-components";
 import { FlexCard } from "../styled/FlexCard";
 import { useContext } from "react";
 import FileStatusContext from "../context/FileStatusContext";
 import uploadImage from "../services/uploadImage";
 import { isImageFile } from "../utils/isImageFile";
-
-const SelectFileCard = styled(FlexCard)`
-  width: 85%;
-
-  @media (min-width: 800px) {
-    width: 55%;
-  }
-
-  @media (min-width: 1366px) {
-    width: 25%;
-  }
-`;
 
 const DragSelectFile = ({ show = true }) => {
   const { setUploading, setUploadedImg } = useContext(FileStatusContext);
@@ -40,11 +27,11 @@ const DragSelectFile = ({ show = true }) => {
   return (
     <>
       {show ? (
-        <SelectFileCard>
+        <FlexCard>
           <UploadImgHeader />
           <DragContainer handleSelectedFile={handleSelectedFile} />
           <UploadImgFooter handleSelectedFile={handleSelectedFile} />
-        </SelectFileCard>
+        </FlexCard>
       ) : null}
     </>
   );
