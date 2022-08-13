@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { font } from "../utils/css_vars";
+import { font } from "../../utils/css_vars";
 
 export const StyledH1 = styled.h1`
   font-size: 18px;
@@ -8,4 +8,9 @@ export const StyledH1 = styled.h1`
   text-align: center;
   color: #4f4f4f;
   font-family: ${font};
+`;
+
+export const UploadingStatusText = styled(StyledH1)`
+  text-align: left;
+  padding-bottom: 30px;
 `;

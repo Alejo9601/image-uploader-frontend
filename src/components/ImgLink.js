@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import useCopyToClipboard from "../hooks/useCopyToClipboard";
-import { FlexColumnDiv } from "../styled/FlexColumnDiv";
-import { P_ellipsis as P } from "../styled/P_ellipsis";
+import { FlexColumnDiv } from "../styled/DIVS";
+import { P_ellipsis as P } from "../styled/P";
 import { colorBlue, font } from "../utils/css_vars";
 
 const Wrapper = styled(FlexColumnDiv)`

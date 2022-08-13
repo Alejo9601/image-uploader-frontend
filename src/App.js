@@ -3,7 +3,7 @@ import FileStatusContext from "./context/FileStatusContext";
 import { useContext } from "react";
 import DragSelectFile from "./pages/DragSelectImg";
 import Uploading from "./pages/Uploading";
-import { Main } from "./styled/Main";
+import { Main } from "./styled/DIVS";
 
 function App() {
   const { uploading, uploadedImg } = useContext(FileStatusContext);

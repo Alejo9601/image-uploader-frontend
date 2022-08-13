@@ -1,7 +1,7 @@
 import DragContainer from "../components/DragContainer";
 import UploadImgHeader from "../components/UploadImgHeader";
 import UploadImgFooter from "../components/UploadImgFooter";
-import { FlexCard } from "../styled/FlexCard";
+import { FlexCard } from "../styled/DIVS";
 import { useContext } from "react";
 import FileStatusContext from "../context/FileStatusContext";
 import uploadImage from "../services/uploadImage";

@@ -1,12 +1,12 @@
-import { CardHeader } from "../styled/CardHeader";
-import { StyledParagraph } from "../styled/StyledParagraph";
-import { StyledH1 } from "../styled/StyledH1";
+import { CardHeader } from "../styled/DIVS";
+import { P } from "../styled/P";
+import { StyledH1 } from "../styled/H1";
 
 const UploadImgHeader = () => {
   return (
     <CardHeader>
       <StyledH1>Upload your Image</StyledH1>
-      <StyledParagraph>Files should be PNG, JPEG ...</StyledParagraph>
+      <P>Files should be PNG, JPEG ...</P>
     </CardHeader>
   );
 };

@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Button } from "../styled/Button";
+import { Button } from "../styled/DIVS";
 import { StyledInput } from "../styled/StyledInput";
 
 const InputButton = ({ handleSelectedFile }) => {

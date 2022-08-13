@@ -1,5 +1,5 @@
-import { CardHeader } from "../styled/CardHeader";
-import { StyledH1 } from "../styled/StyledH1";
+import { CardHeader } from "../styled/DIVS";
+import { StyledH1 } from "../styled/H1";
 
 const SuccesHeader = () => {
   return (

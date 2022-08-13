@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import FileStatusContext from "../context/FileStatusContext";
 import { FullFitImage } from "../styled/FullFitImage";
-import { ImgContainer } from "../styled/ImgContainer";
+import { ImgContainer } from "../styled/DIVS";
 
 const UploadedImage = () => {
   const { uploadedImg } = useContext(FileStatusContext);

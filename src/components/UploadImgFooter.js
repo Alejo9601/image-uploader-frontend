@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { FlexColumnDiv } from "../styled/FlexColumnDiv";
-import { P_12px as P } from "../styled/P_12px";
+import { FlexColumnDiv } from "../styled/DIVS";
+import { P_12px as P } from "../styled/P";
 import InputButton from "./InputButton";
 
 const StyledDiv = styled(FlexColumnDiv)`

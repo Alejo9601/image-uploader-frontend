@@ -1,7 +1,7 @@
 import ImgLink from "../components/ImgLink";
 import SuccessHeader from "../components/SuccessHeader";
 import UploadedImage from "../components/UploadedImage";
-import { FlexCard } from "../styled/FlexCard";
+import { FlexCard } from "../styled/DIVS";
 
 const Detail = () => {
   return (
