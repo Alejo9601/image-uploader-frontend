@@ -1,22 +1,9 @@
 import { useEffect, useRef } from "react";
-import styled from "styled-components";
+import { DragArea } from "../styled/DragArea";
 import { FlexColumnDiv } from "../styled/FlexColumnDiv";
 import { StyledInput } from "../styled/StyledInput";
-import { StyledParagraph } from "../styled/StyledParagraph";
+import { P_12px as P } from "../styled/P_12px";
 import BackgroundImage from "./BackgroundImage";
-
-const StyledDiv = styled(FlexColumnDiv)`
-  height: 250px;
-  width: 85%;
-  margin: 15px 0px;
-  border: 3px dashed #a2dbfa66;
-  border-radius: 10px;
-  background-color: #e1e5ea80;
-  position: relative;
-`;
-const GuideParagraph = styled(StyledParagraph)`
-  color: #cfd2cf;
-`;
 
 const DragContainer = ({ handleSelectedFile }) => {
   const inputRef = useRef();
@@ -37,13 +24,13 @@ const DragContainer = ({ handleSelectedFile }) => {
   }, []);
 
   return (
-    <StyledDiv ref={divRef}>
+    <DragArea ref={divRef}>
       <FlexColumnDiv>
         <BackgroundImage />
-        <GuideParagraph>{`Drag & Drop your image here`}</GuideParagraph>
+        <P>{`Drag & Drop your image here`}</P>
       </FlexColumnDiv>
       <StyledInput ref={inputRef} type="file" onChange={handleOnChange} />
-    </StyledDiv>
+    </DragArea>
   );
 };
 

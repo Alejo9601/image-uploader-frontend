@@ -1,25 +1,15 @@
-import styled from "styled-components";
 import Detail from "./pages/Detail";
 import FileStatusContext from "./context/FileStatusContext";
 import { useContext } from "react";
 import DragSelectFile from "./pages/DragSelectImg";
 import Uploading from "./pages/Uploading";
-
-const StyledMain = styled.main`
-  width: 100vw;
-  height: 100vh;
-  background-color: #f2f2f2;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-`;
+import { Main } from "./styled/Main";
 
 function App() {
   const { uploading, uploadedImg } = useContext(FileStatusContext);
 
   return (
-    <StyledMain>
+    <Main>
       {uploadedImg !== null ? (
         <Detail />
       ) : (
@@ -28,7 +18,7 @@ function App() {
           <Uploading show={uploading ? true : false} />
         </>
       )}
-    </StyledMain>
+    </Main>
   );
 }
 

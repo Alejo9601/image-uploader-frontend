@@ -1,18 +1,16 @@
 import styled from "styled-components";
 import { FlexColumnDiv } from "../styled/FlexColumnDiv";
-import { StyledParagraph } from "../styled/StyledParagraph";
+import { P_12px as P } from "../styled/P_12px";
 import InputButton from "./InputButton";
 
 const StyledDiv = styled(FlexColumnDiv)`
-  height: 25%;
-  width: 100%;
   margin: 0px 0px 40px 0px;
 `;
 
 const UploadImgFooter = ({ handleSelectedFile }) => {
   return (
     <StyledDiv>
-      <StyledParagraph>Or</StyledParagraph>
+      <P>Or</P>
       <InputButton handleSelectedFile={handleSelectedFile} />
     </StyledDiv>
   );
