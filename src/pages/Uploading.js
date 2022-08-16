@@ -1,6 +1,6 @@
 import ProgressBar from "../components/ProgressBar";
-import { UploadingCard } from "../styled/DIVS";
-import { UploadingStatusText } from "../styled/H1";
+import { UploadingCard } from "../styled/div";
+import { UploadingStatusText } from "../styled/h1";
 
 const Uploading = ({ show }) => {
   return (

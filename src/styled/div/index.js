@@ -1,18 +1,24 @@
 import styled from "styled-components";
 import { cardBackground, colorBlue, font } from "../../utils/css_vars";
 
-export const FlexColumnDiv = styled.div`
+export const FlexDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+export const FlexColumnDiv = styled(FlexDiv)`
   flex-direction: column;
 `;
 
-export const StyledDiv = styled.div`
+export const FlexColumnDiv_Spaced = styled(FlexColumnDiv)`
+  justify-content: space-around;
+`;
+
+export const MiddleContainer = styled(FlexDiv)`
   height: 219px;
   width: 338px;
   border-radius: 10px;
-  margin: 15px 0px;
 `;
 
 export const StaticBar = styled.div`
@@ -47,30 +53,23 @@ export const Main = styled(FlexColumnDiv)`
 `;
 
 export const FlexCard = styled(FlexColumnDiv)`
+  justify-content: space-evenly;
   width: 402px;
+  height: 469px;
   border-radius: 10px;
   box-shadow: 0px 1px 5px 0px lightgray;
   background-color: ${cardBackground};
 `;
 
 export const UploadingCard = styled(FlexCard)`
+  height: fit-content;
   padding: 30px 20px;
 `;
 
-export const DragArea = styled(FlexColumnDiv)`
-  height: 219px;
-  width: 338px;
-  margin: 15px 0px;
+export const DragArea = styled(MiddleContainer)`
   border: 3px dashed #a2dbfa66;
-  border-radius: 10px;
   background-color: #e1e5ea80;
   position: relative;
-`;
-
-export const ImgContainer = styled(StyledDiv)``;
-
-export const CardHeader = styled(FlexColumnDiv)`
-  margin: 40px 0px 15px 0px;
 `;
 
 export const Button = styled(FlexColumnDiv)`
@@ -89,4 +88,14 @@ export const Button = styled(FlexColumnDiv)`
     content: "Choose a File";
     padding: 2px 5px;
   }
+`;
+
+export const LinkContainer = styled(FlexDiv)`
+  background-color: #e1e5ea80;
+  border-radius: 10px;
+  height: 35px;
+  width: 338px;
+  padding: 1px;
+  justify-content: space-between;
+  border: 1px solid lightgray;
 `;

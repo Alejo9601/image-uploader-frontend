@@ -6,3 +6,9 @@ export const FullFitImage = styled.img`
   border-radius: inherit;
   object-fit: cover;
 `;
+
+export const SuccessImg = styled.img`
+  height: 35px;
+  width: 35px;
+  margin-bottom: 10px;
+`;

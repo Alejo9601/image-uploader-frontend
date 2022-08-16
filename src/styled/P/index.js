@@ -16,6 +16,7 @@ const P_8px = styled(P)`
 `;
 
 const P_12px = styled(P)`
+  margin: 0px;
   font-size: 12px;
   color: #bdbdbd;
 `;
