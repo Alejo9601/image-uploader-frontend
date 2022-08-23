@@ -5,7 +5,7 @@ const useCopyToClipboard = () => {
   const [copied, setCopied] = useState(false);
   const { uploadedImg } = useContext(FileStatusContext);
 
-  const link = `https://img-upload-back.herokuapp.com/${uploadedImg.name}`;
+  const link = uploadedImg.url;
 
   const copyLinkToClipboard = () => {
     let TempText = document.createElement("input");

@@ -8,10 +8,7 @@ const UploadedImage = () => {
 
   return (
     <ImgContainer>
-      <FullFitImage
-        src={`https://img-upload-back.herokuapp.com/${uploadedImg.name}`}
-        alt="Uploaded"
-      />
+      <FullFitImage src={uploadedImg.url} alt="Uploaded" />
     </ImgContainer>
   );
 };
