@@ -13,12 +13,10 @@ const DragSelectFile = ({ show = true }) => {
   const handleSelectedFile = (selectedImg) => {
     if (isImageFile(selectedImg)) {
       setUploading(true);
-      uploadImage(selectedImg).then((res) =>
-        setTimeout(() => {
-          setUploadedImg(res);
-          setUploading(false);
-        }, 2000)
-      );
+      uploadImage(selectedImg).then((res) => {
+        setUploadedImg(res);
+        setUploading(false);
+      });
     } else {
       alert("Files should be PNG, JPG... JPEG");
     }
