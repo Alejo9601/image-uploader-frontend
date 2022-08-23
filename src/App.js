@@ -1,7 +1,7 @@
-import Detail from "./pages/Detail";
 import FileStatusContext from "./context/FileStatusContext";
 import { useContext } from "react";
-import DragSelectFile from "./pages/DragSelectImg";
+import Detail from "./pages/Detail";
+import Upload from "./pages/Upload";
 import Uploading from "./pages/Uploading";
 import { Main } from "./styled/div";
 
@@ -14,7 +14,7 @@ function App() {
         <Detail />
       ) : (
         <>
-          <DragSelectFile show={uploading ? false : true} />
+          <Upload show={uploading ? false : true} />
           <Uploading show={uploading ? true : false} />
         </>
       )}
