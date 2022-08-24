@@ -1,7 +1,7 @@
-import { P_12px as P } from "../styled/p";
+import { P_12px as P } from "../../styled/p";
 import InputButton from "./InputButton";
 
-const UploadImgFooter = ({ handleSelectedFile }) => {
+const UploadBottom = ({ handleSelectedFile }) => {
   return (
     <div>
       <P>Or</P>
@@ -10,4 +10,4 @@ const UploadImgFooter = ({ handleSelectedFile }) => {
   );
 };
 
-export default UploadImgFooter;
+export default UploadBottom;

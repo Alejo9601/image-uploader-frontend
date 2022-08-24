@@ -1,8 +1,8 @@
 import FileStatusContext from "./context/FileStatusContext";
 import { useContext } from "react";
-import Detail from "./pages/Detail";
-import Upload from "./pages/Upload";
-import Uploading from "./pages/Uploading";
+import Detail from "./components/detail";
+import Upload from "./components/upload";
+import Uploading from "./components/uploading";
 import { Main } from "./styled/div";
 
 function App() {

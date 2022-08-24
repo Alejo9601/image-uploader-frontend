@@ -1,7 +1,7 @@
-import useCopyToClipboard from "../hooks/useCopyToClipboard";
-import { P_ellipsis as P } from "../styled/p";
-import { CopyButton } from "../styled/button";
-import { LinkContainer } from "../styled/div";
+import useCopyToClipboard from "../../hooks/useCopyToClipboard";
+import { P_ellipsis as P } from "../../styled/p";
+import { CopyButton } from "../../styled/button";
+import { LinkContainer } from "../../styled/div";
 
 const ImgLink = () => {
   const { copied, link, copyLinkToClipboard } = useCopyToClipboard();
