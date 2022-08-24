@@ -21,6 +21,10 @@ const P_12px = styled(P)`
   color: #bdbdbd;
 `;
 
+const DragDescription = styled(P_12px)`
+  margin-top: 15px;
+`;
+
 const P_ellipsis = styled(P)`
   width: 70%;
   margin-top: 0px;
@@ -31,4 +35,4 @@ const P_ellipsis = styled(P)`
   text-overflow: ellipsis;
 `;
 
-export { P, P_8px, P_12px, P_ellipsis };
+export { P, P_8px, P_12px, DragDescription, P_ellipsis };
