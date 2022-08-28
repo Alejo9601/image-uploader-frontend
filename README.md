@@ -8,15 +8,15 @@
 
 <div align="center">
   <h3>
-    <a href="https://imguploader.vercel.app">
+    <a href="https://imguploader.vercel.app" rel="noreferrer" target="_blank">
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/Alejo9601/image-uploader-backend.git">
+    <a href="https://github.com/Alejo9601/image-uploader-backend.git" rel="noreferrer" target="_blank">
       API Repository
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/O2iGT9yBd6xZBrOcVirx">
+    <a href="https://devchallenges.io/challenges/O2iGT9yBd6xZBrOcVirx" rel="noreferrer" target="_blank">
       Challenge
     </a>
   </h3>
