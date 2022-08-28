@@ -37,7 +37,9 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![UPLOADER1](https://user-images.githubusercontent.com/29733627/187097488-c7130de5-4513-4178-8377-e942d4186019.PNG)
+![UPLOADER2](https://user-images.githubusercontent.com/29733627/187097497-762d2f0a-60a1-444e-9eba-9a85cf80e0ff.PNG)
+![UPLOADER3](https://user-images.githubusercontent.com/29733627/187097503-0e44a254-5061-4e81-ae95-ea9e348da63f.PNG)
 
 You can see the demo of the project by clicking on the DEMO link that appears above in this file...
 
